@@ -1,0 +1,188 @@
+.share-poster {
+  position: relative;
+  width: 375px;
+  min-height: 667px;
+  border-radius: 0;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+.share-poster-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* 极轻遮罩：只在上下边缘略压暗，中间大面积留背景 */
+.share-poster-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.22) 0%,
+      rgba(0, 0, 0, 0) 18%,
+      rgba(0, 0, 0, 0) 72%,
+      rgba(0, 0, 0, 0.28) 100%
+    );
+  pointer-events: none;
+}
+
+.share-poster-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  min-height: 667px;
+  padding: 18px 16px 16px;
+}
+
+.share-poster-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: auto;
+}
+
+.share-poster-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.share-poster-stats p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #fff;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.55),
+    0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.share-poster-stats strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.share-poster-date {
+  margin-top: 2px !important;
+  font-size: 11px !important;
+  opacity: 0.92;
+}
+
+.share-poster-body {
+  margin-top: auto;
+  padding: 0 2px 12px;
+}
+
+.share-poster-sticky {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: rgba(255, 248, 220, 0.92);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transform: rotate(-0.6deg);
+}
+
+.share-poster-sticky-title {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #222;
+}
+
+.share-poster-sticky-en {
+  margin: 0;
+  font-size: 12px;
+  font-style: italic;
+  color: #555;
+}
+
+.share-poster-sticky-divider {
+  height: 1px;
+  margin: 10px 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.share-poster-sticky-study {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.share-poster-sticky-words {
+  margin: 0 0 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #2a9d8f;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.share-poster-sticky-dict {
+  margin: 0;
+  font-size: 11px;
+  color: #666;
+}
+
+.share-poster-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.share-poster-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.share-poster-brand strong {
+  font-size: 14px;
+  color: #fff;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.55),
+    0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.share-poster-brand span {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.4;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.share-poster-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.share-poster-qr-svg {
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+}

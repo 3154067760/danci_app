@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg-base: #0a0f0d;
+  --bg-gradient-top: #0f1a14;
+  --bg-gradient-glow: rgba(45, 90, 70, 0.35);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --accent-green: #4db6ac;
+  --accent-green-dim: rgba(77, 182, 172, 0.15);
+  --accent-green-dim-hover: rgba(77, 182, 172, 0.28);
+  --accent-orange: #d27c58;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-hover: rgba(255, 255, 255, 0.06);
+  --surface-hover-strong: rgba(255, 255, 255, 0.1);
+  --surface-border: rgba(255, 255, 255, 0.06);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --btn-primary-text: #0a0f0d;
+  --visual-card-bg: #f5f5f5;
+  --visual-card-caption: #1a1a1a;
+  --visual-card-shadow: rgba(0, 0, 0, 0.35);
+  --root-shadow: rgba(0, 0, 0, 0.5);
+  --max-width-mobile: 480px;
+  --max-width-tablet: 768px;
+  --max-width-desktop: 1024px;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --bg-base: #f4f7f6;
+  --bg-gradient-top: #e8f0ed;
+  --bg-gradient-glow: rgba(77, 182, 172, 0.18);
+  --text-primary: #1a2421;
+  --text-secondary: rgba(26, 36, 33, 0.72);
+  --text-muted: rgba(26, 36, 33, 0.48);
+  --accent-green: #2a9d8f;
+  --accent-green-dim: rgba(42, 157, 143, 0.12);
+  --accent-green-dim-hover: rgba(42, 157, 143, 0.22);
+  --accent-orange: #c76b42;
+  --surface: rgba(0, 0, 0, 0.04);
+  --surface-hover: rgba(0, 0, 0, 0.06);
+  --surface-hover-strong: rgba(0, 0, 0, 0.08);
+  --surface-border: rgba(0, 0, 0, 0.08);
+  --border-subtle: rgba(0, 0, 0, 0.1);
+  --btn-primary-text: #ffffff;
+  --visual-card-bg: #ffffff;
+  --visual-card-caption: #1a1a1a;
+  --visual-card-shadow: rgba(0, 0, 0, 0.1);
+  --root-shadow: rgba(0, 0, 0, 0.08);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-base);
+  background-image:
+    radial-gradient(ellipse 120% 60% at 50% -10%, var(--bg-gradient-glow) 0%, transparent 55%),
+    linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--bg-base) 40%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100%;
+}
+
+.page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  #root {
+    width: 100%;
+    max-width: var(--max-width-desktop);
+  }
+}
+
+@media (min-width: 1200px) {
+  #root {
+    max-width: 1100px;
+    margin: 0 auto;
+    border-left: 1px solid var(--surface-border);
+    border-right: 1px solid var(--surface-border);
+    box-shadow: 0 0 80px var(--root-shadow);
+  }
+}

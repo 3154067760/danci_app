@@ -1,0 +1,793 @@
+{
+  "meta": {
+    "version": 1,
+    "name": "离线英语词典",
+    "description": "本地词库：单词释义、例句、配图与离线发音",
+    "updatedAt": "2026-06-05",
+    "entryCount": 34
+  },
+  "entries": [
+    {
+      "id": "1",
+      "word": "abandon",
+      "phonetic": "/ə'bændən/",
+      "partOfSpeech": "vt.",
+      "definition": "放弃；抛弃；遗弃",
+      "example": {
+        "en": "They had to abandon the car in the heavy snow.",
+        "zh": "他们不得不把汽车丢弃在大雪里。"
+      },
+      "image": {
+        "file": "w001-abandon.svg",
+        "caption": "Abandon the Car"
+      },
+      "audio": {
+        "wordFile": "w001-abandon.mp3",
+        "sentenceFile": "w001-abandon.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "2",
+      "word": "ability",
+      "phonetic": "/ə'bɪləti/",
+      "partOfSpeech": "n.",
+      "definition": "能力；才能",
+      "example": {
+        "en": "She has the ability to learn languages quickly.",
+        "zh": "她有快速学习语言的能力。"
+      },
+      "image": {
+        "file": "w002-ability.png",
+        "caption": "Learning Ability"
+      },
+      "audio": {
+        "wordFile": "w002-ability.mp3",
+        "sentenceFile": "w002-ability.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "3",
+      "word": "accept",
+      "phonetic": "/ək'sept/",
+      "partOfSpeech": "vt.",
+      "definition": "接受；承认；同意",
+      "example": {
+        "en": "Please accept my sincere apology.",
+        "zh": "请接受我诚挚的道歉。"
+      },
+      "image": {
+        "file": "w003-accept.svg",
+        "caption": "Accept an Apology"
+      },
+      "audio": {
+        "wordFile": "w003-accept.mp3",
+        "sentenceFile": "w003-accept.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "4",
+      "word": "accident",
+      "phonetic": "/'æksɪdənt/",
+      "partOfSpeech": "n.",
+      "definition": "事故；意外",
+      "example": {
+        "en": "He was slightly injured in a traffic accident.",
+        "zh": "他在一场交通事故中受了轻伤。"
+      },
+      "image": {
+        "file": "w004-accident.svg",
+        "caption": "Traffic Accident"
+      },
+      "audio": {
+        "wordFile": "w004-accident.mp3",
+        "sentenceFile": "w004-accident.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "5",
+      "word": "accomplish",
+      "phonetic": "/ə'kɒmplɪʃ/",
+      "partOfSpeech": "vt.",
+      "definition": "完成；实现",
+      "example": {
+        "en": "We accomplished our goal ahead of schedule.",
+        "zh": "我们提前完成了目标。"
+      },
+      "image": {
+        "file": "w005-accomplish.svg",
+        "caption": "Accomplish a Goal"
+      },
+      "audio": {
+        "wordFile": "w005-accomplish.mp3",
+        "sentenceFile": "w005-accomplish.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "intermediate"
+    },
+    {
+      "id": "6",
+      "word": "environment",
+      "phonetic": "/ɪn'vaɪrənmənt/",
+      "partOfSpeech": "n.",
+      "definition": "环境；周围状况",
+      "example": {
+        "en": "We must protect the natural environment.",
+        "zh": "我们必须保护自然环境。"
+      },
+      "image": {
+        "file": "w006-environment.svg",
+        "caption": "Natural Environment"
+      },
+      "audio": {
+        "wordFile": "w006-environment.mp3",
+        "sentenceFile": "w006-environment.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "intermediate"
+    },
+    {
+      "id": "7",
+      "word": "challenge",
+      "phonetic": "/'tʃælɪndʒ/",
+      "partOfSpeech": "n.",
+      "definition": "挑战；质疑",
+      "example": {
+        "en": "Learning a new language is a fun challenge.",
+        "zh": "学习一门新语言是有趣的挑战。"
+      },
+      "image": {
+        "file": "w007-challenge.png",
+        "caption": "Daily Challenge"
+      },
+      "audio": {
+        "wordFile": "w007-challenge.mp3",
+        "sentenceFile": "w007-challenge.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "intermediate"
+    },
+    {
+      "id": "8",
+      "word": "confident",
+      "phonetic": "/'kɒnfɪdənt/",
+      "partOfSpeech": "adj.",
+      "definition": "自信的；确信的",
+      "example": {
+        "en": "She feels confident about the job interview.",
+        "zh": "她对这次求职面试很有信心。"
+      },
+      "image": {
+        "file": "w008-confident.svg",
+        "caption": "Confident Speaker"
+      },
+      "audio": {
+        "wordFile": "w008-confident.mp3",
+        "sentenceFile": "w008-confident.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "intermediate"
+    },
+    {
+      "id": "9",
+      "word": "insurance",
+      "phonetic": "/ɪn'ʃʊərəns/",
+      "partOfSpeech": "n.",
+      "definition": "保险；保障；保险费",
+      "example": {
+        "en": "Health insurance covers most medical expenses.",
+        "zh": "健康保险涵盖大部分医疗费用。"
+      },
+      "image": {
+        "file": "w009-insurance.svg",
+        "caption": "Health Insurance Coverage"
+      },
+      "audio": {
+        "wordFile": "w009-insurance.mp3",
+        "sentenceFile": "w009-insurance.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "intermediate"
+    },
+    {
+      "id": "10",
+      "word": "responsible",
+      "phonetic": "/rɪ'spɒnsəbl/",
+      "partOfSpeech": "adj.",
+      "definition": "有责任的；负责的；可靠的",
+      "example": {
+        "en": "Mike is responsible for designing the entire project.",
+        "zh": "迈克负责设计全部工程。"
+      },
+      "image": {
+        "file": "w010-responsible.svg",
+        "caption": "Project Design Lead"
+      },
+      "audio": {
+        "wordFile": "w010-responsible.mp3",
+        "sentenceFile": "w010-responsible.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "intermediate"
+    },
+    {
+      "id": "11",
+      "word": "mulberry",
+      "phonetic": "/ˈmʌlbəri/",
+      "partOfSpeech": "n.",
+      "definition": "桑树；桑葚；深紫红色",
+      "example": {
+        "en": "The mulberry tree in the backyard bears sweet fruit every summer.",
+        "zh": "后院里的桑树每年夏天都结出甘甜的果实。"
+      },
+      "image": {
+        "file": "w011-mulberry.png",
+        "caption": "Mulberry Tree"
+      },
+      "audio": {
+        "wordFile": "w011-mulberry.mp3",
+        "sentenceFile": "w011-mulberry.mp3"
+      },
+      "tags": [
+        "CET6"
+      ],
+      "level": "intermediate"
+    },
+    {
+      "id": "12",
+      "word": "ladder",
+      "phonetic": "/ˈlædə(r)/",
+      "partOfSpeech": "n.",
+      "definition": "梯子；阶梯",
+      "example": {
+        "en": "He climbed the ladder to fix the roof.",
+        "zh": "他爬上梯子修理屋顶。"
+      },
+      "image": {
+        "file": "w012-ladder.png",
+        "caption": "Climb the Ladder"
+      },
+      "audio": {
+        "wordFile": "w012-ladder.mp3",
+        "sentenceFile": "w012-ladder.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "13",
+      "word": "apple",
+      "phonetic": "/ˈæpl/",
+      "partOfSpeech": "n.",
+      "definition": "苹果",
+      "example": {
+        "en": "She ate a red apple for lunch.",
+        "zh": "她午餐吃了一个红苹果。"
+      },
+      "image": {
+        "file": "w013-apple.png",
+        "caption": "Red Apple"
+      },
+      "audio": {
+        "wordFile": "w013-apple.mp3",
+        "sentenceFile": "w013-apple.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "14",
+      "word": "banana",
+      "phonetic": "/bəˈnɑːnə/",
+      "partOfSpeech": "n.",
+      "definition": "香蕉",
+      "example": {
+        "en": "Monkeys love to eat bananas.",
+        "zh": "猴子喜欢吃香蕉。"
+      },
+      "image": {
+        "file": "w014-banana.png",
+        "caption": "Yellow Banana"
+      },
+      "audio": {
+        "wordFile": "w014-banana.mp3",
+        "sentenceFile": "w014-banana.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "15",
+      "word": "orange",
+      "phonetic": "/ˈɒrɪndʒ/",
+      "partOfSpeech": "n.",
+      "definition": "橙子；橙黄色",
+      "example": {
+        "en": "Fresh orange juice is full of vitamin C.",
+        "zh": "鲜榨橙汁富含维生素 C。"
+      },
+      "image": {
+        "file": "w015-orange.png",
+        "caption": "Fresh Orange"
+      },
+      "audio": {
+        "wordFile": "w015-orange.mp3",
+        "sentenceFile": "w015-orange.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "16",
+      "word": "grape",
+      "phonetic": "/ɡreɪp/",
+      "partOfSpeech": "n.",
+      "definition": "葡萄",
+      "example": {
+        "en": "These grapes taste sweet and juicy.",
+        "zh": "这些葡萄又甜又多汁。"
+      },
+      "image": {
+        "file": "w016-grape.png",
+        "caption": "Sweet Grapes"
+      },
+      "audio": {
+        "wordFile": "w016-grape.mp3",
+        "sentenceFile": "w016-grape.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "17",
+      "word": "mango",
+      "phonetic": "/ˈmæŋɡəʊ/",
+      "partOfSpeech": "n.",
+      "definition": "芒果",
+      "example": {
+        "en": "Mango is my favorite tropical fruit.",
+        "zh": "芒果是我最喜欢的热带水果。"
+      },
+      "image": {
+        "file": "w017-mango.png",
+        "caption": "Tropical Mango"
+      },
+      "audio": {
+        "wordFile": "w017-mango.mp3",
+        "sentenceFile": "w017-mango.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "18",
+      "word": "peach",
+      "phonetic": "/piːtʃ/",
+      "partOfSpeech": "n.",
+      "definition": "桃子",
+      "example": {
+        "en": "The peach tree blooms in early spring.",
+        "zh": "桃树在早春开花。"
+      },
+      "image": {
+        "file": "w018-peach.png",
+        "caption": "Peach Blossom"
+      },
+      "audio": {
+        "wordFile": "w018-peach.mp3",
+        "sentenceFile": "w018-peach.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "19",
+      "word": "lemon",
+      "phonetic": "/ˈlemən/",
+      "partOfSpeech": "n.",
+      "definition": "柠檬",
+      "example": {
+        "en": "Add a slice of lemon to the tea.",
+        "zh": "往茶里加一片柠檬。"
+      },
+      "image": {
+        "file": "w019-lemon.png",
+        "caption": "Fresh Lemon"
+      },
+      "audio": {
+        "wordFile": "w019-lemon.mp3",
+        "sentenceFile": "w019-lemon.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "20",
+      "word": "cherry",
+      "phonetic": "/ˈtʃeri/",
+      "partOfSpeech": "n.",
+      "definition": "樱桃",
+      "example": {
+        "en": "Cherry blossoms are beautiful in April.",
+        "zh": "四月的樱花很美。"
+      },
+      "image": {
+        "file": "w020-cherry.png",
+        "caption": "Cherry Blossom"
+      },
+      "audio": {
+        "wordFile": "w020-cherry.mp3",
+        "sentenceFile": "w020-cherry.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "21",
+      "word": "melon",
+      "phonetic": "/ˈmelən/",
+      "partOfSpeech": "n.",
+      "definition": "甜瓜；瓜",
+      "example": {
+        "en": "This melon is ripe and fragrant.",
+        "zh": "这个甜瓜熟了，很香。"
+      },
+      "image": {
+        "file": "w021-melon.png",
+        "caption": "Ripe Melon"
+      },
+      "audio": {
+        "wordFile": "w021-melon.mp3",
+        "sentenceFile": "w021-melon.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "22",
+      "word": "kiwi",
+      "phonetic": "/ˈkiːwi/",
+      "partOfSpeech": "n.",
+      "definition": "猕猴桃",
+      "example": {
+        "en": "Kiwi fruit is rich in fiber.",
+        "zh": "猕猴桃富含膳食纤维。"
+      },
+      "image": {
+        "file": "w022-kiwi.png",
+        "caption": "Kiwi Fruit"
+      },
+      "audio": {
+        "wordFile": "w022-kiwi.mp3",
+        "sentenceFile": "w022-kiwi.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "23",
+      "word": "algebra",
+      "phonetic": "/ˈæl.dʒə.brə/",
+      "partOfSpeech": "n.",
+      "definition": "代数；代数学",
+      "example": {
+        "en": "One of the fundamental concepts that we learn about in linear algebra is the idea of vector spaces.",
+        "zh": "我们在线性代数中学到的基本概念之一是向量空间的概念。"
+      },
+      "image": {
+        "file": "w023-algebra.png",
+        "caption": "Aside: What Does \"Parallel\" Mean?"
+      },
+      "audio": {
+        "wordFile": "w023-algebra.mp3",
+        "sentenceFile": "w023-algebra.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "24",
+      "word": "associative",
+      "phonetic": "/əˈsoʊʃiˌeɪtɪv/",
+      "partOfSpeech": "adj.",
+      "definition": "联想的；结合的；[数]结合的",
+      "example": {
+        "en": "This is the so-called associative law.",
+        "zh": "这就是所谓的结合律。"
+      },
+      "image": {
+        "file": "w024-associative.png",
+        "caption": "Associative Law"
+      },
+      "audio": {
+        "wordFile": "w024-associative.mp3",
+        "sentenceFile": "w024-associative.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "25",
+      "word": "concede",
+      "phonetic": "/kənˈsiːd/",
+      "partOfSpeech": "v.",
+      "definition": "承认（某事属实、合理或不可避免）；让步",
+      "example": {
+        "en": "But I think you would concede that that is a fair point.",
+        "zh": "但我认为你会承认那是一个合理的观点。"
+      },
+      "image": {
+        "file": "w025-concede.png",
+        "caption": "Conceding a Point in Discussion"
+      },
+      "audio": {
+        "wordFile": "w025-concede.mp3",
+        "sentenceFile": "w025-concede.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "26",
+      "word": "derivative",
+      "phonetic": "/dɪˈrɪvətɪv/",
+      "partOfSpeech": "n.",
+      "definition": "导数；衍生物",
+      "example": {
+        "en": "Velocity is a derivative of displacement with respect to time.",
+        "zh": "速度是位移对时间的导数。"
+      },
+      "image": {
+        "file": "w026-derivative.png",
+        "caption": "Geometric Vectors"
+      },
+      "audio": {
+        "wordFile": "w026-derivative.mp3",
+        "sentenceFile": "w026-derivative.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "27",
+      "word": "displacement",
+      "phonetic": "/dɪsˈpleɪsmənt/",
+      "partOfSpeech": "n.",
+      "definition": "位移；取代；排水量",
+      "example": {
+        "en": "The velocity and displacement vectors are essential for describing motion.",
+        "zh": "速度和位移向量是描述运动的关键。"
+      },
+      "image": {
+        "file": "w027-displacement.png",
+        "caption": "Geometric Vectors"
+      },
+      "audio": {
+        "wordFile": "w027-displacement.mp3",
+        "sentenceFile": "w027-displacement.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "28",
+      "word": "emanate",
+      "phonetic": "/ˈɛməˌneɪt/",
+      "partOfSpeech": "v.",
+      "definition": "发出，散发；起源，发源",
+      "example": {
+        "en": "The line is emanating from P and terminating at Q.",
+        "zh": "这条线从P点发出，终止于Q点。"
+      },
+      "image": {
+        "file": "w028-emanate.png",
+        "caption": "Point Notation"
+      },
+      "audio": {
+        "wordFile": "w028-emanate.mp3",
+        "sentenceFile": "w028-emanate.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "29",
+      "word": "mass",
+      "phonetic": "/mæs/",
+      "partOfSpeech": "n.",
+      "definition": "质量；大量；群众",
+      "example": {
+        "en": "Examples are mass, time, distance, speed, and temperature.",
+        "zh": "例子包括质量、时间、距离、速度和温度。"
+      },
+      "image": {
+        "file": "w029-mass.png",
+        "caption": "Geometric Vectors"
+      },
+      "audio": {
+        "wordFile": "w029-mass.mp3",
+        "sentenceFile": "w029-mass.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "30",
+      "word": "monkey",
+      "phonetic": "/ˈmʌŋki/",
+      "partOfSpeech": "n.",
+      "definition": "猴子",
+      "example": {
+        "en": "Return the queen or I'll destroy all of you! shouted the monkey.",
+        "zh": "“把女王还回来，否则我就把你们全毁了！”猴子喊道。"
+      },
+      "image": {
+        "file": "w030-monkey.png",
+        "caption": "Monkey Shouting Threat"
+      },
+      "audio": {
+        "wordFile": "w030-monkey.mp3",
+        "sentenceFile": "w030-monkey.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "31",
+      "word": "parallelogram",
+      "phonetic": "/ˌpærəˈlɛləɡræm/",
+      "partOfSpeech": "n.",
+      "definition": "平行四边形",
+      "example": {
+        "en": "The so-called parallelogram law is a fundamental principle in vector addition.",
+        "zh": "所谓的平行四边形法则是向量加法中的一个基本原理。"
+      },
+      "image": {
+        "file": "w031-parallelogram.png",
+        "caption": "The So-Called Parallelogram Law"
+      },
+      "audio": {
+        "wordFile": "w031-parallelogram.mp3",
+        "sentenceFile": "w031-parallelogram.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "32",
+      "word": "scalar",
+      "phonetic": "/ˈskeɪlər/",
+      "partOfSpeech": "n.",
+      "definition": "标量；纯量（只有大小没有方向的量）",
+      "example": {
+        "en": "The word scalar typically refers to a real number, as opposed to a vector which has both magnitude and direction.",
+        "zh": "单词“scalar”通常指一个实数，与既有大小又有方向的向量相对。"
+      },
+      "image": {
+        "file": "w032-scalar.png",
+        "caption": "Geometric Vectors"
+      },
+      "audio": {
+        "wordFile": "w032-scalar.mp3",
+        "sentenceFile": "w032-scalar.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "33",
+      "word": "takeout",
+      "phonetic": "/ˈteɪk.aʊt/",
+      "partOfSpeech": "n.",
+      "definition": "外卖食物",
+      "example": {
+        "en": "Let's order takeout tonight instead.",
+        "zh": "我们今晚改叫外卖吧。"
+      },
+      "image": {
+        "file": "w033-takeout.png",
+        "caption": "VibeEnglish Podcast"
+      },
+      "audio": {
+        "wordFile": "w033-takeout.mp3",
+        "sentenceFile": "w033-takeout.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "34",
+      "word": "tilde",
+      "phonetic": "/ˈtɪldə/",
+      "partOfSpeech": "n.",
+      "definition": "波浪号（~），用于表示近似、否定或变音符号",
+      "example": {
+        "en": "But when we write them we use a tilde.",
+        "zh": "但当我们书写它们时，我们会使用波浪号。"
+      },
+      "image": {
+        "file": "w034-tilde.png",
+        "caption": "Geometric Vectors"
+      },
+      "audio": {
+        "wordFile": "w034-tilde.mp3",
+        "sentenceFile": "w034-tilde.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    }
+  ]
+}

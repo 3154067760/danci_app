@@ -1,0 +1,35 @@
+﻿word,phonetic,partOfSpeech,definition,example_en,example_zh,image_file,image_caption,tags,level
+abandon,/ə'bændən/,vt.,放弃；抛弃；遗弃,They had to abandon the car in the heavy snow.,他们不得不把汽车丢弃在大雪里。,w001-abandon.svg,Abandon the Car,CET4,basic
+ability,/ə'bɪləti/,n.,能力；才能,She has the ability to learn languages quickly.,她有快速学习语言的能力。,w002-ability.png,Learning Ability,CET4,basic
+accept,/ək'sept/,vt.,接受；承认；同意,Please accept my sincere apology.,请接受我诚挚的道歉。,w003-accept.svg,Accept an Apology,CET4,basic
+accident,/'æksɪdənt/,n.,事故；意外,He was slightly injured in a traffic accident.,他在一场交通事故中受了轻伤。,w004-accident.svg,Traffic Accident,CET4,basic
+accomplish,/ə'kɒmplɪʃ/,vt.,完成；实现,We accomplished our goal ahead of schedule.,我们提前完成了目标。,w005-accomplish.svg,Accomplish a Goal,CET4,intermediate
+environment,/ɪn'vaɪrənmənt/,n.,环境；周围状况,We must protect the natural environment.,我们必须保护自然环境。,w006-environment.svg,Natural Environment,CET4,intermediate
+challenge,/'tʃælɪndʒ/,n.,挑战；质疑,Learning a new language is a fun challenge.,学习一门新语言是有趣的挑战。,w007-challenge.png,Daily Challenge,CET4,intermediate
+confident,/'kɒnfɪdənt/,adj.,自信的；确信的,She feels confident about the job interview.,她对这次求职面试很有信心。,w008-confident.svg,Confident Speaker,CET4,intermediate
+insurance,/ɪn'ʃʊərəns/,n.,保险；保障；保险费,Health insurance covers most medical expenses.,健康保险涵盖大部分医疗费用。,w009-insurance.svg,Health Insurance Coverage,CET4,intermediate
+responsible,/rɪ'spɒnsəbl/,adj.,有责任的；负责的；可靠的,Mike is responsible for designing the entire project.,迈克负责设计全部工程。,w010-responsible.svg,Project Design Lead,CET4,intermediate
+mulberry,/ˈmʌlbəri/,n.,桑树；桑葚；深紫红色,The mulberry tree in the backyard bears sweet fruit every summer.,后院里的桑树每年夏天都结出甘甜的果实。,w011-mulberry.png,Mulberry Tree,CET6,intermediate
+ladder,/ˈlædə(r)/,n.,梯子；阶梯,He climbed the ladder to fix the roof.,他爬上梯子修理屋顶。,w012-ladder.png,Climb the Ladder,CET4,basic
+apple,/ˈæpl/,n.,苹果,She ate a red apple for lunch.,她午餐吃了一个红苹果。,w013-apple.png,Red Apple,CET4,basic
+banana,/bəˈnɑːnə/,n.,香蕉,Monkeys love to eat bananas.,猴子喜欢吃香蕉。,w014-banana.png,Yellow Banana,CET4,basic
+orange,/ˈɒrɪndʒ/,n.,橙子；橙黄色,Fresh orange juice is full of vitamin C.,鲜榨橙汁富含维生素 C。,w015-orange.png,Fresh Orange,CET4,basic
+grape,/ɡreɪp/,n.,葡萄,These grapes taste sweet and juicy.,这些葡萄又甜又多汁。,w016-grape.png,Sweet Grapes,CET4,basic
+mango,/ˈmæŋɡəʊ/,n.,芒果,Mango is my favorite tropical fruit.,芒果是我最喜欢的热带水果。,w017-mango.png,Tropical Mango,CET4,basic
+peach,/piːtʃ/,n.,桃子,The peach tree blooms in early spring.,桃树在早春开花。,w018-peach.png,Peach Blossom,CET4,basic
+lemon,/ˈlemən/,n.,柠檬,Add a slice of lemon to the tea.,往茶里加一片柠檬。,w019-lemon.png,Fresh Lemon,CET4,basic
+cherry,/ˈtʃeri/,n.,樱桃,Cherry blossoms are beautiful in April.,四月的樱花很美。,w020-cherry.png,Cherry Blossom,CET4,basic
+melon,/ˈmelən/,n.,甜瓜；瓜,This melon is ripe and fragrant.,这个甜瓜熟了，很香。,w021-melon.png,Ripe Melon,CET4,basic
+kiwi,/ˈkiːwi/,n.,猕猴桃,Kiwi fruit is rich in fiber.,猕猴桃富含膳食纤维。,w022-kiwi.png,Kiwi Fruit,CET4,basic
+algebra,/ˈæl.dʒə.brə/,n.,代数；代数学,One of the fundamental concepts that we learn about in linear algebra is the idea of vector spaces.,我们在线性代数中学到的基本概念之一是向量空间的概念。,w023-algebra.png,"Aside: What Does ""Parallel"" Mean?",CET4,basic
+associative,/əˈsoʊʃiˌeɪtɪv/,adj.,联想的；结合的；[数]结合的,This is the so-called associative law.,这就是所谓的结合律。,w024-associative.png,Associative Law,CET4,basic
+concede,/kənˈsiːd/,v.,承认（某事属实、合理或不可避免）；让步,But I think you would concede that that is a fair point.,但我认为你会承认那是一个合理的观点。,w025-concede.png,Conceding a Point in Discussion,CET4,basic
+derivative,/dɪˈrɪvətɪv/,n.,导数；衍生物,Velocity is a derivative of displacement with respect to time.,速度是位移对时间的导数。,w026-derivative.png,Geometric Vectors,CET4,basic
+displacement,/dɪsˈpleɪsmənt/,n.,位移；取代；排水量,The velocity and displacement vectors are essential for describing motion.,速度和位移向量是描述运动的关键。,w027-displacement.png,Geometric Vectors,CET4,basic
+emanate,/ˈɛməˌneɪt/,v.,发出，散发；起源，发源,The line is emanating from P and terminating at Q.,这条线从P点发出，终止于Q点。,w028-emanate.png,Point Notation,CET4,basic
+mass,/mæs/,n.,质量；大量；群众,"Examples are mass, time, distance, speed, and temperature.",例子包括质量、时间、距离、速度和温度。,w029-mass.png,Geometric Vectors,CET4,basic
+monkey,/ˈmʌŋki/,n.,猴子,Return the queen or I'll destroy all of you! shouted the monkey.,“把女王还回来，否则我就把你们全毁了！”猴子喊道。,w030-monkey.png,Monkey Shouting Threat,CET4,basic
+parallelogram,/ˌpærəˈlɛləɡræm/,n.,平行四边形,The so-called parallelogram law is a fundamental principle in vector addition.,所谓的平行四边形法则是向量加法中的一个基本原理。,w031-parallelogram.png,The So-Called Parallelogram Law,CET4,basic
+scalar,/ˈskeɪlər/,n.,标量；纯量（只有大小没有方向的量）,"The word scalar typically refers to a real number, as opposed to a vector which has both magnitude and direction.",单词“scalar”通常指一个实数，与既有大小又有方向的向量相对。,w032-scalar.png,Geometric Vectors,CET4,basic
+takeout,/ˈteɪk.aʊt/,n.,外卖食物,Let's order takeout tonight instead.,我们今晚改叫外卖吧。,w033-takeout.png,VibeEnglish Podcast,CET4,basic
+tilde,/ˈtɪldə/,n.,波浪号（~），用于表示近似、否定或变音符号,But when we write them we use a tilde.,但当我们书写它们时，我们会使用波浪号。,w034-tilde.png,Geometric Vectors,CET4,basic

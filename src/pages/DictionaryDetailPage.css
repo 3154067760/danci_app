@@ -1,0 +1,5 @@
+@import './DictionariesPage.css';
+
+.dictionary-detail-page .dict-detail-title-wrap {
+  margin-top: 0.25rem;
+}

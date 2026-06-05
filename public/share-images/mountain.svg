@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="mountainSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#90CAF9"/>
+      <stop offset="100%" stop-color="#E3F2FD"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#mountainSky)"/>
+  <path d="M0 600 L200 280 L380 420 L520 180 L680 360 L800 240 L800 600 Z" fill="#78909C"/>
+  <path d="M120 600 L320 320 L480 480 L620 260 L800 400 L800 600 Z" fill="#546E7A"/>
+  <path d="M400 600 L520 380 L620 480 L720 340 L800 420 L800 600 Z" fill="#37474F"/>
+  <circle cx="680" cy="100" r="40" fill="#FFF59D"/>
+</svg>

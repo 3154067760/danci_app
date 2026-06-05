@@ -1,0 +1,9 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+
+# ECDICT 原始词库（体积大，本地自行下载）
+data/dictionary/ecdict.csv
+data/dictionary/image-inbox/.ai-enrich-cache.json

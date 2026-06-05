@@ -1,0 +1,40 @@
+.speak-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent-green-dim);
+  color: var(--accent-green);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.speak-btn:hover {
+  background: var(--accent-green-dim-hover);
+}
+
+.speak-btn:active {
+  transform: scale(0.92);
+}
+
+.speak-btn--sm {
+  width: 28px;
+  height: 28px;
+}
+
+.speak-btn--sm svg {
+  width: 14px;
+  height: 14px;
+}
+
+.speak-btn--md {
+  width: 36px;
+  height: 36px;
+}
+
+.speak-btn--md svg {
+  width: 18px;
+  height: 18px;
+}

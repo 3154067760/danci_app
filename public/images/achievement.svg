@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5c6bc0"/>
+      <stop offset="100%" stop-color="#3949ab"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd54f"/>
+      <stop offset="100%" stop-color="#ffb300"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#sky)"/>
+  <rect x="0" y="300" width="640" height="100" fill="#2e7d32"/>
+  <rect x="200" y="120" width="240" height="180" rx="8" fill="#fff" opacity="0.95"/>
+  <rect x="220" y="140" width="200" height="140" rx="4" fill="#e8eaf6"/>
+  <circle cx="320" cy="200" r="50" fill="url(#gold)"/>
+  <text x="320" y="212" text-anchor="middle" fill="#e65100" font-family="Inter,sans-serif" font-size="36" font-weight="700">A+</text>
+  <path d="M280 260 L310 290 L360 240" stroke="#4db6ac" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="150" cy="80" r="8" fill="#ffd54f" opacity="0.8"/>
+  <circle cx="500" cy="60" r="6" fill="#ffd54f" opacity="0.6"/>
+  <circle cx="480" cy="100" r="5" fill="#fff" opacity="0.5"/>
+  <rect x="260" y="320" width="120" height="40" rx="20" fill="rgba(255,255,255,0.15)"/>
+  <text x="320" y="346" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-size="14">Graduation Celebration</text>
+</svg>

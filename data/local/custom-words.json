@@ -1,0 +1,38 @@
+[
+  {
+    "id": "custom-1780112321565-qrfrg",
+    "word": "strawberrie",
+    "phonetic": "/ˈstrɔːbəri/",
+    "partOfSpeech": "n.",
+    "definition": "草莓",
+    "example": "I'd like a cup of strawberry juice for breakfast.",
+    "exampleTranslation": "早餐我想要一杯草莓汁",
+    "imageCaption": "strawberry juice",
+    "imageUrl": "/dictionary/images/custom-strawberrie-qrfrg.png",
+    "sentenceAudioUrl": "/dictionary/audio/sentences/custom-strawberrie-qrfrg-sentence.mp3"
+  },
+  {
+    "id": "custom-1780113739092-64joz",
+    "word": "plum",
+    "phonetic": "/plʌm/",
+    "partOfSpeech": "n.",
+    "definition": "李子",
+    "example": "This plum tastes sweet",
+    "exampleTranslation": "这个李子尝起来很甜。",
+    "imageCaption": "plum",
+    "imageUrl": "/dictionary/images/custom-plum-64joz.png",
+    "sentenceAudioUrl": "/dictionary/audio/sentences/custom-plum-64joz-sentence.mp3"
+  },
+  {
+    "id": "custom-1780117114234-76rcn",
+    "word": "panda",
+    "phonetic": "/ˈpændə/",
+    "partOfSpeech": "n.",
+    "definition": "熊猫",
+    "example": "The panda is eating bamboo leaves happily",
+    "exampleTranslation": "熊猫正在开心地吃着竹叶。",
+    "imageCaption": "panda",
+    "imageUrl": "/dictionary/images/custom-panda-76rcn.jpg",
+    "sentenceAudioUrl": "/dictionary/audio/sentences/custom-panda-76rcn-sentence.mp3"
+  }
+]

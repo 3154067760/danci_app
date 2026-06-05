@@ -1,0 +1,37 @@
+{
+  "name": "danci-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/copy-local-data.mjs && npx tsc -b && npx vite build",
+    "start": "npx vite preview --host 0.0.0.0 --port 3002",
+    "preview": "vite preview",
+    "dict:sync-images": "node scripts/sync-dictionary-images.mjs",
+    "dict:download-ecdict": "node scripts/download-ecdict.mjs",
+    "dict:sync-audio": "node scripts/sync-dictionary-audio.mjs",
+    "dict:export": "node scripts/export-dictionary-csv.mjs",
+    "dict:enrich": "node scripts/enrich-csv-from-ecdict.mjs",
+    "dict:import": "node scripts/import-dictionary-csv.mjs",
+    "sample:import-data": "node scripts/generate-sample-import.mjs",
+    "dict:enrich-from-images": "node scripts/enrich-words-from-images.mjs",
+    "dict:ai-import-images": "node scripts/ai-import-images.mjs"
+  },
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "html-to-image": "^1.11.13",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "node-edge-tts": "^1.2.10",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}
