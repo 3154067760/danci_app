@@ -6,7 +6,9 @@ import path from 'node:path'
 import { syncDictionaryAudio } from './lib/sync-dictionary-audio-core.mjs'
 import { loadEnv } from './lib/load-env.mjs'
 import { enrichImagesFromFolder } from './lib/enrich-from-image.mjs'
+import { aiAddWord, parseMultipartAiAddWord } from './lib/ai-add-word.mjs'
 import { aiImportImages, parseMultipartAiImport } from './lib/ai-import-images.mjs'
+import { syncDictionaryToGit } from './lib/git-sync-dictionary.mjs'
 import {
   batchImportWords,
   parseMultipartBatchImport,
@@ -37,6 +39,8 @@ const API_ACTIONS = new Set([
   'batch-import',
   'enrich-from-images',
   'ai-import-images',
+  'ai-add-word',
+  'git-sync',
   'entries',
 ])
 
@@ -279,6 +283,33 @@ async function handleLocalDataRequest(req, res) {
 
   if (pathname === '/api/local-data/ai-import-images' && req.method === 'POST') {
     await handleAiImportImages(req, res)
+    return
+  }
+
+  if (pathname === '/api/local-data/ai-add-word' && req.method === 'POST') {
+    try {
+      const payload = await parseMultipartAiAddWord(req)
+      const result = await aiAddWord(payload)
+      sendJson(res, 200, { ok: true, ...result })
+    } catch (error) {
+      sendJson(res, 400, { error: error instanceof Error ? error.message : 'AI 添加失败' })
+    }
+    return
+  }
+
+  if (pathname === '/api/local-data/git-sync' && req.method === 'POST') {
+    try {
+      const body = await readBody(req)
+      const payload = body?.trim() ? JSON.parse(body) : {}
+      const result = syncDictionaryToGit({ message: payload.message })
+      if (!result.ok) {
+        sendJson(res, 400, { error: result.error ?? 'Git 同步失败' })
+        return
+      }
+      sendJson(res, 200, { ok: true, ...result })
+    } catch (error) {
+      sendJson(res, 400, { error: error instanceof Error ? error.message : 'Git 同步失败' })
+    }
     return
   }
 

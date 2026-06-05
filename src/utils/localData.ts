@@ -344,6 +344,55 @@ async function readAiImportSse(
   return finalResult
 }
 
+export interface AiAddWordRow {
+  word: string
+  phonetic: string
+  partOfSpeech: string
+  definition: string
+  example_en: string
+  example_zh: string
+  image_caption: string
+}
+
+export interface AiAddWordResult {
+  ok: boolean
+  message?: string
+  word?: string
+  wordId?: string
+  row?: AiAddWordRow
+  created?: number
+  updated?: number
+  git?: { ok: boolean; pushed?: boolean; message?: string; error?: string }
+  error?: string
+}
+
+/** 填写单词 + 上传图片，AI 自动生成释义例句并写入词库 */
+export async function aiAddWord(formData: FormData): Promise<AiAddWordResult> {
+  if (!(await isLocalDataApiAvailable())) {
+    return {
+      ok: false,
+      error: '当前环境无法调用本地 API，请确认 npm run dev 或 PM2 已启动，且已配置 .env',
+    }
+  }
+
+  try {
+    const res = await fetch(`${API_BASE}/ai-add-word`, {
+      method: 'POST',
+      body: formData,
+    })
+    const payload = (await res.json()) as AiAddWordResult & { error?: string }
+    if (!res.ok) {
+      return { ok: false, error: payload.error ?? 'AI 添加失败' }
+    }
+    return { ...payload, ok: true }
+  } catch (error) {
+    return {
+      ok: false,
+      error: error instanceof Error ? error.message : '上传失败，请检查网络、图片大小与 API Key',
+    }
+  }
+}
+
 /** 上传图片文件夹，AI 识图后直接导入词库（无需 Excel） */
 export async function aiImportImages(
   formData: FormData,

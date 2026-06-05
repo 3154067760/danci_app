@@ -1,19 +1,18 @@
-import { FormEvent, useMemo, useState } from 'react'
+import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useDictionaries } from '../context/DictionaryContext'
 import { useWordBank } from '../context/WordBankContext'
-import { readFileAsDataUrl } from '../utils/customWords'
+import { aiAddWord, isLocalDataApiAvailable } from '../utils/localData'
 import './AddWordPage.css'
 
 const MAX_IMAGE_BYTES = 2 * 1024 * 1024
-const MAX_AUDIO_BYTES = 2 * 1024 * 1024
 
 export default function AddWordPage() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const dictId = searchParams.get('dictId')
-  const { addCustomWord } = useWordBank()
-  const { dictionaries, addWordsToDictionary, setActiveDictionary } = useDictionaries()
+  const { reloadBuiltinWords } = useWordBank()
+  const { dictionaries, reloadDictionaryState } = useDictionaries()
 
   const targetDictionary = useMemo(
     () => dictionaries.find((item) => item.id === dictId),
@@ -21,84 +20,114 @@ export default function AddWordPage() {
   )
 
   const [word, setWord] = useState('')
-  const [phonetic, setPhonetic] = useState('')
-  const [partOfSpeech, setPartOfSpeech] = useState('n.')
-  const [definition, setDefinition] = useState('')
-  const [example, setExample] = useState('')
-  const [exampleTranslation, setExampleTranslation] = useState('')
-  const [imageCaption, setImageCaption] = useState('')
   const [imagePreview, setImagePreview] = useState<string | null>(null)
   const [imageFile, setImageFile] = useState<File | null>(null)
-  const [wordAudioFile, setWordAudioFile] = useState<File | null>(null)
-  const [sentenceAudioFile, setSentenceAudioFile] = useState<File | null>(null)
+  const [syncGit, setSyncGit] = useState(true)
+  const [canRun, setCanRun] = useState<boolean | null>(null)
+  const [phase, setPhase] = useState<'idle' | 'ai' | 'save' | 'git' | 'done'>('idle')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
+  const [preview, setPreview] = useState<{
+    phonetic: string
+    definition: string
+    example_en: string
+    example_zh: string
+  } | null>(null)
 
-  const handleImageChange = async (file: File | null) => {
+  useEffect(() => {
+    void isLocalDataApiAvailable().then(setCanRun)
+  }, [])
+
+  const handleImageChange = (file: File | null) => {
     setImageFile(file)
+    setPreview(null)
     if (!file) {
       setImagePreview(null)
       return
     }
-    try {
-      const url = await readFileAsDataUrl(file, MAX_IMAGE_BYTES)
-      setImagePreview(url)
-      setError('')
-    } catch (err) {
+    if (file.size > MAX_IMAGE_BYTES) {
       setImageFile(null)
       setImagePreview(null)
-      setError(err instanceof Error ? err.message : '图片读取失败')
+      setError(`图片过大（${(file.size / 1024 / 1024).toFixed(1)}MB），请压缩到 ≤2MB`)
+      return
     }
+    setError('')
+    setImagePreview(URL.createObjectURL(file))
   }
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault()
     setError('')
+    setPreview(null)
+    setPhase('ai')
     setSubmitting(true)
 
+    const trimmedWord = word.trim()
+    if (!trimmedWord) {
+      setError('请填写单词')
+      setSubmitting(false)
+      setPhase('idle')
+      return
+    }
+    if (!imageFile) {
+      setError('请上传配图')
+      setSubmitting(false)
+      setPhase('idle')
+      return
+    }
+
     try {
-      let imageUrl = ''
-      if (imageFile) {
-        imageUrl = await readFileAsDataUrl(imageFile, MAX_IMAGE_BYTES)
-      }
-
-      let wordAudioUrl: string | undefined
-      if (wordAudioFile) {
-        wordAudioUrl = await readFileAsDataUrl(wordAudioFile, MAX_AUDIO_BYTES)
-      }
-
-      let sentenceAudioUrl: string | undefined
-      if (sentenceAudioFile) {
-        sentenceAudioUrl = await readFileAsDataUrl(sentenceAudioFile, MAX_AUDIO_BYTES)
-      }
-
-      const entry = addCustomWord({
-        word,
-        phonetic,
-        partOfSpeech,
-        definition,
-        example,
-        exampleTranslation,
-        imageCaption: imageCaption || word.trim(),
-        imageUrl,
-        wordAudioUrl,
-        sentenceAudioUrl,
-      })
-
+      const ext = imageFile.name.match(/\.(png|jpe?g|webp)$/i)?.[0] ?? '.png'
+      const formData = new FormData()
+      formData.append('word', trimmedWord)
+      formData.append('image', imageFile, `${trimmedWord}${ext}`)
+      formData.append('syncGit', syncGit ? 'true' : 'false')
       if (targetDictionary) {
-        addWordsToDictionary(targetDictionary.id, [entry.id])
-        setActiveDictionary(targetDictionary.id)
-        navigate(`/study/detail/${entry.id}`)
+        formData.append('dictionaryId', targetDictionary.id)
+      }
+
+      setPhase('ai')
+      const result = await aiAddWord(formData)
+      if (!result.ok) {
+        setError(result.error ?? '添加失败')
+        setPhase('idle')
         return
       }
 
-      navigate(`/study/detail/${entry.id}`)
+      setPhase('save')
+      if (result.row) {
+        setPreview({
+          phonetic: result.row.phonetic,
+          definition: result.row.definition,
+          example_en: result.row.example_en,
+          example_zh: result.row.example_zh,
+        })
+      }
+
+      await Promise.all([reloadBuiltinWords(), reloadDictionaryState()])
+
+      if (syncGit) setPhase('git')
+      setPhase('done')
+
+      const wordId = result.wordId
+      if (wordId) {
+        navigate(`/study/detail/${wordId}`)
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : '保存失败')
+      setPhase('idle')
     } finally {
       setSubmitting(false)
     }
   }
+
+  const phaseLabel = useMemo(() => {
+    if (phase === 'ai') return 'AI 识图中，正在生成音标、释义与例句…'
+    if (phase === 'save') return '写入词库…'
+    if (phase === 'git') return '同步到 GitHub…'
+    if (phase === 'done') return '完成'
+    return ''
+  }, [phase])
 
   return (
     <div className="page add-word-page">
@@ -108,83 +137,37 @@ export default function AddWordPage() {
         </button>
         <h1 className="add-word-title">添加单词</h1>
         <p className="add-word-subtitle">
-          {targetDictionary
-            ? `将保存到本地文件（data/local/），并加入「${targetDictionary.name}」`
-            : '保存到本地文件（data/local/），可在词书中选词使用'}
+          只需填写<strong>单词</strong>并上传<strong>配图</strong>，音标、释义、例句由 AI 自动生成并写入词库
+          {targetDictionary ? `，并加入「${targetDictionary.name}」` : ''}。
         </p>
       </header>
 
-      <form className="add-word-form" onSubmit={handleSubmit}>
+      {canRun === false && (
+        <p className="add-word-warn">
+          需在 dev / PM2 模式下运行，且项目根目录配置 <code>.env</code>（参考 <code>.env.example</code>）。
+        </p>
+      )}
+
+      <form className="add-word-form" onSubmit={(e) => void handleSubmit(e)}>
         <section className="add-word-section">
-          <h2 className="add-word-section-title">基本信息</h2>
+          <h2 className="add-word-section-title">单词与配图</h2>
           <label className="add-word-field">
             <span>单词 *</span>
-            <input value={word} onChange={(e) => setWord(e.target.value)} placeholder="如 ladder" required />
-          </label>
-          <div className="add-word-row">
-            <label className="add-word-field">
-              <span>音标</span>
-              <input
-                value={phonetic}
-                onChange={(e) => setPhonetic(e.target.value)}
-                placeholder="/ˈlædə(r)/"
-              />
-            </label>
-            <label className="add-word-field add-word-field--short">
-              <span>词性</span>
-              <input value={partOfSpeech} onChange={(e) => setPartOfSpeech(e.target.value)} placeholder="n." />
-            </label>
-          </div>
-          <label className="add-word-field">
-            <span>中文释义 *</span>
-            <textarea
-              value={definition}
-              onChange={(e) => setDefinition(e.target.value)}
-              placeholder="梯子；阶梯"
-              rows={2}
-              required
-            />
-          </label>
-        </section>
-
-        <section className="add-word-section">
-          <h2 className="add-word-section-title">例句</h2>
-          <label className="add-word-field">
-            <span>英文例句</span>
-            <textarea
-              value={example}
-              onChange={(e) => setExample(e.target.value)}
-              placeholder="He climbed the ladder to fix the roof."
-              rows={2}
-            />
-          </label>
-          <label className="add-word-field">
-            <span>例句翻译</span>
-            <textarea
-              value={exampleTranslation}
-              onChange={(e) => setExampleTranslation(e.target.value)}
-              placeholder="他爬上梯子修理屋顶。"
-              rows={2}
-            />
-          </label>
-        </section>
-
-        <section className="add-word-section">
-          <h2 className="add-word-section-title">配图</h2>
-          <label className="add-word-field">
-            <span>图片说明</span>
             <input
-              value={imageCaption}
-              onChange={(e) => setImageCaption(e.target.value)}
-              placeholder="Climb the Ladder"
+              value={word}
+              onChange={(e) => setWord(e.target.value)}
+              placeholder="如 ladder"
+              required
+              autoComplete="off"
             />
           </label>
           <label className="add-word-file">
-            <span>上传图片（选填，最大 2MB）</span>
+            <span>配图 *（png / jpg / webp，≤ 2MB，建议 640×400）</span>
             <input
               type="file"
-              accept="image/png,image/jpeg,image/webp,image/svg+xml"
-              onChange={(e) => void handleImageChange(e.target.files?.[0] ?? null)}
+              accept="image/png,image/jpeg,image/webp"
+              required
+              onChange={(e) => handleImageChange(e.target.files?.[0] ?? null)}
             />
           </label>
           {imagePreview && (
@@ -195,30 +178,43 @@ export default function AddWordPage() {
         </section>
 
         <section className="add-word-section">
-          <h2 className="add-word-section-title">发音（选填）</h2>
-          <p className="add-word-hint">不上传时将使用英式 TTS 在线播放</p>
-          <label className="add-word-file">
-            <span>单词发音 mp3</span>
+          <label className="add-word-checkbox">
             <input
-              type="file"
-              accept="audio/mpeg,audio/mp3,audio/wav,audio/*"
-              onChange={(e) => setWordAudioFile(e.target.files?.[0] ?? null)}
+              type="checkbox"
+              checked={syncGit}
+              onChange={(e) => setSyncGit(e.target.checked)}
             />
+            <span>保存后自动提交并推送到 GitHub</span>
           </label>
-          <label className="add-word-file">
-            <span>例句发音 mp3</span>
-            <input
-              type="file"
-              accept="audio/mpeg,audio/mp3,audio/wav,audio/*"
-              onChange={(e) => setSentenceAudioFile(e.target.files?.[0] ?? null)}
-            />
-          </label>
+          <p className="add-word-hint">会提交 entries.json、import.csv 与新图片；需本机已配置 Git 远程与登录。</p>
         </section>
+
+        {phaseLabel && submitting && (
+          <p className="add-word-phase" aria-live="polite">
+            {phaseLabel}
+          </p>
+        )}
+
+        {preview && (
+          <section className="add-word-section add-word-preview">
+            <h2 className="add-word-section-title">AI 生成预览</h2>
+            <p>
+              <strong>{word.trim()}</strong> {preview.phonetic}
+            </p>
+            <p>{preview.definition}</p>
+            <p>{preview.example_en}</p>
+            <p className="add-word-muted">{preview.example_zh}</p>
+          </section>
+        )}
 
         {error && <p className="add-word-error">{error}</p>}
 
-        <button type="submit" className="add-word-submit" disabled={submitting}>
-          {submitting ? '保存中…' : '保存单词'}
+        <button
+          type="submit"
+          className="add-word-submit"
+          disabled={submitting || canRun === false || !word.trim() || !imageFile}
+        >
+          {submitting ? 'AI 生成并保存中…' : 'AI 生成并保存'}
         </button>
       </form>
     </div>

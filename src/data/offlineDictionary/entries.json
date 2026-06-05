@@ -4,7 +4,7 @@
     "name": "离线英语词典",
     "description": "本地词库：单词释义、例句、配图与离线发音",
     "updatedAt": "2026-06-05",
-    "entryCount": 34
+    "entryCount": 39
   },
   "entries": [
     {
@@ -783,6 +783,121 @@
       "audio": {
         "wordFile": "w034-tilde.mp3",
         "sentenceFile": "w034-tilde.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "35",
+      "word": "float",
+      "phonetic": "/floʊt/",
+      "partOfSpeech": "v.",
+      "definition": "漂浮；浮动",
+      "example": {
+        "en": "Remember, vectors can float freely in space.",
+        "zh": "记住，向量可以在空间中自由浮动。"
+      },
+      "image": {
+        "file": "w035-float.png",
+        "caption": "Addition of Vectors"
+      },
+      "audio": {
+        "wordFile": "w035-float.mp3",
+        "sentenceFile": "w035-float.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "36",
+      "word": "give",
+      "phonetic": "/ɡɪv/",
+      "partOfSpeech": "v.",
+      "definition": "给予；产生；引起",
+      "example": {
+        "en": "We've given birth to a new vector.",
+        "zh": "我们产生了一个新的向量。"
+      },
+      "image": {
+        "file": "w036-give.png",
+        "caption": "Addition of Vectors"
+      },
+      "audio": {
+        "wordFile": "w036-give.mp3",
+        "sentenceFile": "w036-give.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "37",
+      "word": "notation",
+      "phonetic": "/noʊˈteɪʃən/",
+      "partOfSpeech": "n.",
+      "definition": "记号；标记法；符号系统",
+      "example": {
+        "en": "We now introduce point notation to simplify the expression.",
+        "zh": "我们现在引入点标记法以简化表达式。"
+      },
+      "image": {
+        "file": "w037-notation.png",
+        "caption": "Point Notation"
+      },
+      "audio": {
+        "wordFile": "w037-notation.mp3",
+        "sentenceFile": "w037-notation.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "38",
+      "word": "nuanced",
+      "phonetic": "/ˈnuːɑːnst/",
+      "partOfSpeech": "adj.",
+      "definition": "微妙的；有细微差别的",
+      "example": {
+        "en": "Complex and nuanced issues require careful analysis, so I do want to explore them thoroughly.",
+        "zh": "复杂且微妙的问题需要仔细分析，所以我确实想彻底探讨它们。"
+      },
+      "image": {
+        "file": "w038-nuanced.png",
+        "caption": "Complex And Nuanced Issues"
+      },
+      "audio": {
+        "wordFile": "w038-nuanced.mp3",
+        "sentenceFile": "w038-nuanced.mp3"
+      },
+      "tags": [
+        "CET4"
+      ],
+      "level": "basic"
+    },
+    {
+      "id": "39",
+      "word": "overall",
+      "phonetic": "/ˌoʊvərˈɔːl/",
+      "partOfSpeech": "adj.",
+      "definition": "总的；全面的；整体的",
+      "example": {
+        "en": "We need to consider vectors a, b, and c, and then look for the overall net effect.",
+        "zh": "我们需要考虑向量a、b和c，然后找出总的净效果。"
+      },
+      "image": {
+        "file": "w039-overall.png",
+        "caption": "Addition of Vectors"
+      },
+      "audio": {
+        "wordFile": "w039-overall.mp3",
+        "sentenceFile": "w039-overall.mp3"
       },
       "tags": [
         "CET4"

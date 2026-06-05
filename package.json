@@ -16,7 +16,8 @@
     "dict:import": "node scripts/import-dictionary-csv.mjs",
     "sample:import-data": "node scripts/generate-sample-import.mjs",
     "dict:enrich-from-images": "node scripts/enrich-words-from-images.mjs",
-    "dict:ai-import-images": "node scripts/ai-import-images.mjs"
+    "dict:ai-import-images": "node scripts/ai-import-images.mjs",
+    "dict:git-sync": "node scripts/git-sync-dictionary.mjs"
   },
   "dependencies": {
     "busboy": "^1.6.0",

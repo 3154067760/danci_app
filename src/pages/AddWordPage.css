@@ -113,6 +113,47 @@
   color: var(--text-muted);
 }
 
+.add-word-warn {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, #f39c12 14%, transparent);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.add-word-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.add-word-checkbox input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.add-word-phase {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--accent-green) 12%, transparent);
+  color: var(--accent-green);
+  font-size: 0.875rem;
+}
+
+.add-word-preview p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.add-word-muted {
+  color: var(--text-muted);
+}
+
 .add-word-image-preview {
   margin-top: 0.75rem;
   border-radius: 12px;
